@@ -11,12 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130628101841) do
+ActiveRecord::Schema.define(:version => 20130628113341) do
 
   create_table "lines", :force => true do |t|
     t.string   "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "session_id"
   end
+
+  add_index "lines", ["session_id"], :name => "index_lines_on_session_id"
 
 end

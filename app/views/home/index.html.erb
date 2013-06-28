@@ -4,5 +4,9 @@
 </div>
 <div class="right-side">
   <h5 id="counter"><%= @counter %></h5>
-  <div id="informer"></div>
+  <div id="informer">
+    <% @lines.reverse.each do |l| %>
+    <div class="entry"><%= l.created_at %></div>
+    <% end %>
+  </div>
 </div>
