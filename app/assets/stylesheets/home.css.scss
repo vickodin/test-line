@@ -1,3 +1,32 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$border: 1px solid #eee;
+.content {
+  min-width: 1024px;
+  width: 99%;
+  margin: 0 auto;
+  .left-side {
+    float: left;
+  }
+  .right-side {
+    float: right;
+    #informer {
+      height: 300px;
+      overflow: auto;
+      .entry {
+        color: green;
+      }
+    }
+  }
+  .left-side, .right-side {
+    width: 49%;
+    border-top: $border;
+    border-bottom: $border;
+    text-align: center;
+  }
+  .alert {
+    text-align: center;
+    color: red;
+  }
+}

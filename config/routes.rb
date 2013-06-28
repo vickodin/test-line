@@ -1,5 +1,6 @@
 TestLine::Application.routes.draw do
-  post "/home/create", :as => :new_line
+  #post "/home/create", :as => :new_line
+  resources :lines, :controller => :home, :only => [:create]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

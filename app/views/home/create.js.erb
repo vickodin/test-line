@@ -1,0 +1,7 @@
+<% if @line.new_record? %>
+  alert("Проверьте форму");
+<% else %>
+  $("#line_content").val('');
+  $("#counter").html("<%= @counter %>");
+  $("#informer").append('<div class="entry"><%= @line.created_at %></div>');
+<% end %>
